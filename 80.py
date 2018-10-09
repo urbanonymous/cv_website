@@ -37,9 +37,13 @@ def redirect_web():
 def error_404():
     return render_template("404.html")
 
-@app.route('/download/CV', methods=["GET"])
-def download():
-    return send_from_directory(directory="static/downloads", filename="CV.pdf")
+@app.route('/download/cv', methods=["GET"])
+def download_cv():
+    return send_from_directory(directory="static/downloads", filename="cv.pdf")
+
+@app.route('/download/vc', methods=["GET"])
+def download_vc():
+    return send_from_directory(directory="static/downloads", filename="vc.pdf")
 
 
 # SERVER
