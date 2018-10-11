@@ -16,7 +16,7 @@ UPLOAD_FOLDER = "{}/uploads/".format(BASE_DIR)
 QR_FOLDER = "{}/static/img/qr/".format(BASE_DIR)
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 app.secret_key = os.urandom(12)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 app.config["SESSION_TYPE"] = "filesystem"
